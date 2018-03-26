@@ -1,0 +1,1 @@
+SELECT t.name, t.country FROM travelers t WHERE t.country NOT IN ('Canada', 'Mexico', 'USA');

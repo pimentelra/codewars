@@ -1,4 +1,4 @@
-package kyu8;
+package katas.kyu8;
 
 public class Multiply {
     public static Double multiply(Double a, Double b) {

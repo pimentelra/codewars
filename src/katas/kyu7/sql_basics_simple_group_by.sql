@@ -1,0 +1,3 @@
+SELECT AGE, COUNT(*) AS people_count
+FROM PEOPLE
+GROUP BY AGE;
