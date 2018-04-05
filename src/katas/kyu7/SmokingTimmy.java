@@ -2,13 +2,8 @@ package katas.kyu7;
 
 public class SmokingTimmy {
     public static int startSmoking(int bars, int boxes) {
-        int cig = bars * 180 + boxes * 18;
-        int newCigs = cig/5;
-        while (newCigs > 0){
-            cig += newCigs;
-            new
-        }
-
-        return cig + cig / 5;
+        int total = bars * 180 + boxes * 18;
+        for (int i = 5; i < total; i++) if (i % 5 == 0) total++;
+        return total;
     }
 }
