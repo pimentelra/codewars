@@ -1,4 +1,4 @@
-package katas.kyu7;
+package katas.kyu8;
 
 public class IsNDivisibleByXAndY {
     public static boolean isDivisible(long n, long x, long y) {

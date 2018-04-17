@@ -10,8 +10,8 @@ public class WASDMovement {
 
         if (x == 0 || y == 0) return new float[]{x, y};
 
-        double arctan = Math.atan(y / x);
+        double arctan = Math.atan2(y, x);
 
-        return new float[]{(float) Math.cos(arctan) * x, (float) Math.sin(arctan) * y};
+        return new float[]{(float) Math.cos(arctan), (float) Math.sin(arctan)};
     }
 }
