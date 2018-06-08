@@ -33,8 +33,4 @@ public class FIXME1234 {
     static MyNumber getNumber(final String name) {
         return cache.get(name);
     }
-
-    public static void main(String[] args) {
-        System.out.println(getNumber("shi").intValue());
-    }
 }
