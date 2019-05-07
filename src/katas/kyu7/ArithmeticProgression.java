@@ -1,13 +1,11 @@
 package katas.kyu7;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ArithmeticProgression {
     public static String arithmeticSequenceElements(int first, int step, long total) {
-        List<String> answer = new ArrayList<>();
-        for (long i = first; step > 0 ? i < first + (step * total) : i > first + (step * total); i += step) answer.add(String.valueOf(i));
-        return String.join(", ", answer);
+        return Stream.iterate(first, n -> n + step).map(String::valueOf).limit(total).collect(Collectors.joining(", "));
     }
 }
 
