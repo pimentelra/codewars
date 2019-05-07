@@ -8,13 +8,15 @@ public class InterpretersHQ9 {
             case 'Q':
                 return String.valueOf(code);
             case '9':
-                String answer = "99 bottles of beer on the wall, 99 bottles of beer.";
+                StringBuilder answer = new StringBuilder("99 bottles of beer on the wall, 99 bottles of beer.");
                 for (int i = 98; i >= 1; i--) {
                     String bottleNum = i > 1 ? " bottles" : " bottle";
-                    answer += "\nTake one down and pass it around, " + i + bottleNum + " of beer on the wall.";
-                    answer += "\n" + i + bottleNum + " of beer on the wall, " + i + bottleNum + " of beer.";
+                    answer.append("\nTake one down and pass it around, ").append(i).append(bottleNum).append(" of beer on the wall.");
+                    answer.append("\n").append(i).append(bottleNum).append(" of beer on the wall, ").append(i).append(bottleNum).append(" of beer.");
                 }
-                return answer + "\nTake one down and pass it around, no more bottles of beer on the wall.";
+                return new StringBuilder().append(answer).append("\nTake one down and pass it around, no more bottles of beer on the wall.")
+                        .append("\nNo more bottles of beer on the wall, no more bottles of beer.")
+                        .append("\nGo to the store and buy some more, 99 bottles of beer on the wall.").toString();
             default:
                 return null;
         }
