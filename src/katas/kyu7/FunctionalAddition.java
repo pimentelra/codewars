@@ -1,9 +1,9 @@
 package katas.kyu7;
 
-import java.util.function.IntFunction;
+import java.util.function.IntUnaryOperator;
 
 public class FunctionalAddition {
-    public static IntFunction<Integer> add(int x) {
-        return y -> x + y;
+    public static IntUnaryOperator add(int n) {
+        return x -> x + n;
     }
 }
