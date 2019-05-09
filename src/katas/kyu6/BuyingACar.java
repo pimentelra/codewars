@@ -1,7 +1,5 @@
 package katas.kyu6;
 
-import java.util.Arrays;
-
 public class BuyingACar {
     public static int[] nbMonths(int startPriceOld, int startPriceNew, int savingperMonth, double percentLossByMonth) {
         if (startPriceNew <= startPriceOld) return new int[]{0, startPriceOld - startPriceNew};
